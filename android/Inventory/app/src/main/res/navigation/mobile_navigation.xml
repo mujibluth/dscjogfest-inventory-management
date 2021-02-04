@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.inventorylibrary.app.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_search"
+            app:destination="@id/nav_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inventory"
+        android:name="com.inventorylibrary.app.ui.inventory.InventoryFragment"
+        android:label="@string/inventory"
+        tools:layout="@layout/fragment_inventory" >
+        <action
+            android:id="@+id/action_nav_inventory_to_addMultimediaFragment"
+            app:destination="@id/addMultimediaFragment" />
+        <action
+            android:id="@+id/action_nav_inventory_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_borrow"
+        android:name="com.inventorylibrary.app.ui.borrow.BorrowFragment"
+        android:label="@string/borrow"
+        tools:layout="@layout/fragment_borrow" />
+    <fragment
+        android:id="@+id/nav_member"
+        android:name="com.inventorylibrary.app.ui.member.MemberFragment"
+        android:label="@string/member"
+        tools:layout="@layout/fragment_member" >
+        <action
+            android:id="@+id/action_nav_member_to_addMemberFragment"
+            app:destination="@id/addMemberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.inventorylibrary.app.ui.search.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.inventorylibrary.app.ui.addBook.AddBookFragment"
+        android:label="Tambah Buku"
+        tools:layout="@layout/add_book_fragment" />
+    <fragment
+        android:id="@+id/addMultimediaFragment"
+        android:name="com.inventorylibrary.app.ui.addMultimedia.AddMultimediaFragment"
+        android:label="Tambah Multimedia"
+        tools:layout="@layout/add_multimedia_fragment" />
+    <fragment
+        android:id="@+id/addMemberFragment"
+        android:name="com.inventorylibrary.app.ui.addMember.AddMemberFragment"
+        android:label="Tambah Anggota"
+        tools:layout="@layout/add_member_fragment" />
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.inventorylibrary.app.ui.bookDetail.BookDetailFragment"
+        android:label="Detail Buku"
+        tools:layout="@layout/book_detail_fragment">
+        <argument
+            android:name="bookID"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_bookDetailFragment"
+        app:destination="@id/bookDetailFragment" />
+    <fragment
+        android:id="@+id/memberDetailFragment"
+        android:name="com.inventorylibrary.app.ui.memberDetail.MemberDetailFragment"
+        android:label="Detail Member"
+        tools:layout="@layout/member_detail_fragment">
+        <argument
+            android:name="memberID"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_memberDetailFragment"
+        app:destination="@id/memberDetailFragment" />
+    <fragment
+        android:id="@+id/multimediaDetailFragment"
+        android:name="com.inventorylibrary.app.ui.multimediaDetail.MultimediaDetailFragment"
+        android:label="Detail Multimedia"
+        tools:layout="@layout/multimedia_detail_fragment">
+        <argument
+            android:name="multimediaID"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_multimediaDetailFragment"
+        app:destination="@id/multimediaDetailFragment" />
+    <fragment
+        android:id="@+id/pickMemberDialogFragment"
+        android:name="com.inventorylibrary.app.ui.pickMember.PickMemberDialogFragment"
+        android:label="Pilih Anggota"
+        tools:layout="@layout/pick_member_dialog_fragment">
+        <argument
+            android:name="isCatalogOut"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_pickMemberDialogFragment_to_catalogInOutFragment"
+            app:destination="@id/catalogInOutFragment"
+            app:popUpTo="@id/pickMemberDialogFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_pickMemberDialogFragment"
+        app:destination="@id/pickMemberDialogFragment" />
+    <fragment
+        android:id="@+id/catalogInOutFragment"
+        android:name="com.inventorylibrary.app.ui.catalogInOut.CatalogInOutFragment"
+        android:label="catalog_in_out_fragment"
+        tools:layout="@layout/catalog_in_out_fragment" >
+        <argument
+            android:name="isCatalogOut"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="memberId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_catalogInOutFragment_to_pickBookDialogFragment"
+            app:destination="@id/pickBookDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/pickBookDialogFragment"
+        android:name="com.inventorylibrary.app.ui.pickBook.PickBookDialogFragment"
+        android:label="pick_book_fragment"
+        tools:layout="@layout/pick_book_fragment" />
+</navigation>
