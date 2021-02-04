@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Inventory</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Beranda</string>
+    <string name="inventory">Inventory</string>
+    <string name="borrow">Peminjaman</string>
+    <string name="member">Anggota</string>
+</resources>
