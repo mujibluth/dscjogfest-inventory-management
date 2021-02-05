@@ -1,0 +1,49 @@
+.navbar {
+    .title-brand {
+        h5:first-child {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        small {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    [type="search"] {
+        width: 300px;
+    }
+
+    .notification {
+        position: relative;
+
+        a.link-notif {
+            color: #4285f4;
+            font-size: 19px;
+
+            .notif {
+                position: absolute;
+                right: 5%;
+                top: 25%;
+                width: 6px;
+                height: 6px;
+                background: #f45c5c;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    form {
+        position: relative;
+        font-size: 20px;
+        color: #4285f4;
+
+        i {
+            position: absolute;
+            top: 25%;
+            right: 10%;
+        }
+    }
+}
