@@ -1,0 +1,76 @@
+    main .content {
+      .card {
+        border-radius: 5px;
+        background: #d3e2fd;
+        border: none;
+
+        .card-body {
+          text-align: center;
+
+          .card-title {
+            font-weight: 700;
+            margin: 15px 0;
+          }
+
+          .card-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+            background-color: white;
+            border-radius: 50%;
+            color: #4285f4;
+            font-size: 20px;
+          }
+        }
+      }
+
+      #table_id {
+        &.table-striped {
+          tbody>tr:nth-child(odd) {
+            background-color: rgba(230, 239, 255, 0.644);
+          }
+
+          tbody>tr:nth-child(even) {
+            background-color: #efefef;
+          }
+        }
+
+        thead {
+          background-color: #d3e2fd;
+        }
+
+        tr>th,
+        tr>td {
+          padding: 1% 2%;
+        }
+
+        tbody {
+          td {
+            button.btn {
+              float: right;
+              font-weight: 700;
+              padding: 0;
+            }
+
+            i {
+              display: inline-flex;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              margin-right: 7px;
+              align-items: center;
+
+              &.active {
+                background-color: #01ff1a;
+              }
+
+              &.nonactive {
+                background-color: #ff0101;
+              }
+            }
+          }
+        }
+      }
+    }
