@@ -1,0 +1,47 @@
+.sidebar {
+    position: fixed;
+    top: 4.5em;
+    z-index: 999;
+    overflow: auto;
+    padding-top: 10px;
+    width: 15%;
+    height: 90vh;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.27);
+
+    .menu {
+        text-align: left;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #7a7e86;
+            line-height: 3em;
+            padding-left: 19%;
+            font-size: 14px;
+
+            &:hover {
+                background-color: #d3e2fd;
+                color: #4285f4;
+                width: 100%;
+            }
+
+            &:focus {
+                background-color: #d3e2fd;
+                color: #4285f4;
+                width: 100%;
+            }
+
+            i {
+                margin-right: 1em;
+            }
+        }
+    }
+
+    #menu-top {
+        height: 80vh;
+    }
+
+    #menu-bottom {
+        border-top: 1px solid #e6e6e6;
+    }
+}

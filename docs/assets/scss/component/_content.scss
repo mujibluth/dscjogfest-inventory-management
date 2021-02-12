@@ -1,0 +1,27 @@
+body {
+    font-family: Roboto, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    position: relative;
+    width: 100%;
+
+    .content {
+        position: absolute;
+        right: 0;
+        top: 4.5em;
+        width: 85%;
+        padding-top: 20px;
+
+        section {
+            margin-bottom: 41px;
+        }
+
+        h4:first-child {
+            font-weight: 700;
+            margin-bottom: 26px;
+        }
+    }
+}
